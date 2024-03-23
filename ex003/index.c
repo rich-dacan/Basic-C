@@ -21,17 +21,13 @@ void renderInterface(int* n, int* a, int* b, int* c) {
   scanf("%d", c);
 }
 
-
-int main() {
-  int n, a, b, c, numbers[3];
-
-  renderInterface(&n, &a, &b, &c);
+void playProgram(int n,  int* numbers, int* a, int* b, int* c) {
 
   switch (n) {
     case 1:
-      numbers[0] = a;
-      numbers[1] = b;
-      numbers[2] = c;
+      numbers[0] = *a;
+      numbers[1] = *b;
+      numbers[2] = *c;
       qsort(numbers, 3, sizeof(int), compare);
 
       printf("Crescent order: %d, %d, %d\n", numbers[0], numbers[1], numbers[2]);
@@ -39,9 +35,9 @@ int main() {
       break;
 
     case 2:
-      numbers[0] = a;
-      numbers[1] = b;
-      numbers[2] = c;
+      numbers[0] = *a;
+      numbers[1] = *b;
+      numbers[2] = *c;
       qsort(numbers, 3, sizeof(int), compare);
 
       printf("Decrescent order: %d, %d, %d\n", numbers[2], numbers[1], numbers[0]);
@@ -49,9 +45,9 @@ int main() {
       break;
 
     case 3:
-      numbers[0] = a;
-      numbers[1] = b;
-      numbers[2] = c;
+      numbers[0] = *a;
+      numbers[1] = *b;
+      numbers[2] = *c;
 
       if (numbers[0] > numbers[1] && numbers[0] > numbers[2]) {
         printf("All numbers: %d, %d, %d\n", numbers[1], numbers[0], numbers[2]);
@@ -68,6 +64,14 @@ int main() {
     default:
       break;
   }
+}
+
+int main() {
+  int n, a, b, c, numbers[3];
+
+  renderInterface(&n, &a, &b, &c);
+
+  playProgram(n, numbers, &a, &b, &c);
 
   return 0;
 }
