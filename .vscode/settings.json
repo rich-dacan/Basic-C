@@ -3,6 +3,7 @@
     "*.embeddedhtml": "html",
     "*.css": "css",
     "css": "css",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "stdio.h": "c"
   }
 }

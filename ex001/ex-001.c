@@ -1,5 +1,7 @@
 // 1. Faça um algoritmo que encontre qual o maior número par digitado pelo usuário. O usuário deve digitar 50 números e ao final o algoritmo deve imprimir o resultado.
 
+// Build and run on terminal: gcc <file_name>.c -o  <file_name> and ./<file_name>
+
 #include <stdio.h>
 
 int main() {
